@@ -1,4 +1,4 @@
-package www.unlam.edu.com.ar;
+package unlam.edu.ar.pg2;
 
 import static org.junit.Assert.*;
 
@@ -15,19 +15,17 @@ public class testDisco {
 		Double perimetroInteriorEsperado=25.13;
 		
 		Double perimetroInteriorObtenido=miDisco.calcularPerimetroInterior();
-		System.out.print("\n"+"Perimetro Interior = "+perimetroInteriorObtenido);
 		
 		Assert.assertEquals(perimetroInteriorEsperado, perimetroInteriorObtenido,0.01);
 	}
 	
 	@Test
-	public void testQueCalculaElPerimetrodterior() {
+	public void testQueCalculaElPerimetroExterior() {
 		Disco miDisco=new Disco(4.0,6.0);
 		
-		Double perimetroExteriorEsperado=25.13;
+		Double perimetroExteriorEsperado=37.69;
 		
-		Double perimetroExteriorObtenido=miDisco.calcularPerimetroInterior();
-		System.out.print("\n"+"Perimetro Exterior = "+perimetroExteriorObtenido);
+		Double perimetroExteriorObtenido=miDisco.calcularPerimetroExterior();
 		
 		Assert.assertEquals(perimetroExteriorEsperado, perimetroExteriorObtenido,0.01);
 	}
@@ -40,16 +38,6 @@ public class testDisco {
 		Double superficieDelDiscoObtenido=miDisco.calcularSuperficieTotalDeUnDisco();
 		
 		Assert.assertEquals(superficieDelDiscoEsperado, superficieDelDiscoObtenido,0.01);
-		
-		
-		
-		Double superficieRadioInterior=Math.PI*(Math.pow(4.0,4.0));
-		System.out.println(superficieRadioInterior);//804,24
-		
-		Double superficieRadioExterior=Math.PI*(Math.pow(6.0,6.0));
-		System.out.println("hola"+superficieRadioExterior);//146574,14
-		
-		System.out.println("Superficie del Disco = "+(superficieRadioExterior-superficieRadioInterior));
 	}
 
 }
