@@ -1,4 +1,4 @@
-package www.unlam.edu.com.ar;
+package unlam.edu.ar.pg2;
 
 import static org.junit.Assert.*;
 
@@ -21,12 +21,12 @@ public class testDisco {
 	}
 	
 	@Test
-	public void testQueCalculaElPerimetrodterior() {
+	public void testQueCalculaElPerimetroExterior() {
 		Disco miDisco=new Disco(4.0,6.0);
 		
-		Double perimetroExteriorEsperado=25.13;
+		Double perimetroExteriorEsperado=37.69;
 		
-		Double perimetroExteriorObtenido=miDisco.calcularPerimetroInterior();
+		Double perimetroExteriorObtenido=miDisco.calcularPerimetroExterior();
 		System.out.print("\n"+"Perimetro Exterior = "+perimetroExteriorObtenido);
 		
 		Assert.assertEquals(perimetroExteriorEsperado, perimetroExteriorObtenido,0.01);
